@@ -1,13 +1,22 @@
-var co = require('co'),
-    wait = require('co-wait'),
-    cache = require('./');
+var wrapper = require('./'),
+    co = require('co');
 
-var testGenerator = function* testGenerator (a) {
-    yield wait(1000);
-    return a+1;
+var myObject = {
+    first: function* (a,b) {
+        return a+b;
+    },
+    hello: function* (name) {
+        return "Hello, " + name;
+    }
 };
 
+var myCachedObject = wrapper(myObject,180);
 co(function *(){
-    var result = yield cache(testGenerator, [4]);
-    console.log(result);
+    console.log(yield myCachedObject.hello("Oleg!"));
+    //console.log(myCachedObject.first.toString());
+    console.log(yield myCachedObject.first(7,2));
 }).catch(function(e) {throw e; });
+
+
+
+//myCachedObject.fake(1);

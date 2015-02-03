@@ -1,7 +1,7 @@
 {
-  "name": "cacheWrapper",
+  "name": "cache-wrapper",
   "version": "0.0.1",
-  "description": "Caches the results of wrapped function|generator|promise",
+  "description": "Wrap to co-cacher all methods of target ofject",
   "author": {
     "name": "Oleg Cherniy",
     "email": "oleg.cherniy@gmail.com"
@@ -11,11 +11,9 @@
   },
   "dependencies": {
     "config": "*",
-    "crc": "*",
     "co": "*",
     "co-wait": "*",
-    "memcached": "*",
-    "memcache-promise": "*"
+    "co-cacher": "git://github.com/ria-com/node-co-cacher.git#master"
   },
   "devDependencies": {
     "jasmine-node": "*"
