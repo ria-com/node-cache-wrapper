@@ -13,7 +13,7 @@
     /**
      * Cahe wrapper
      *
-     * @param {(function)} myGenerator
+     * @param {(function|generator|promise)} myGenerator
      * @param {Array} args
      * @param {number} cacheTime
      * @return {*}
