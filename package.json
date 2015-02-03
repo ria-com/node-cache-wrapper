@@ -1,0 +1,29 @@
+{
+  "name": "cacheWrapper",
+  "version": "0.0.1",
+  "description": "Caches the results of wrapped function|generator|promise",
+  "author": {
+    "name": "Oleg Cherniy",
+    "email": "oleg.cherniy@gmail.com"
+  },
+  "directories": {
+    "test": "./test"
+  },
+  "dependencies": {
+    "config": "*",
+    "co": "*",
+    "co-wait": "*",
+    "memcached": "*",
+    "memcache-promise": "*"
+  },
+  "devDependencies": {
+    "jasmine-node": "*"
+  },
+  "scripts": {
+    "start": "node --harmony index.js",
+    "test": "node --harmony ./node_modules/jasmine-node/lib/jasmine-node/cli.js spec"
+  },
+  "engines": {
+    "node": ">=0.11.x"
+  }
+}
