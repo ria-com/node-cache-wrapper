@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "config": "*",
+    "crc": "*",
     "co": "*",
     "co-wait": "*",
     "memcached": "*",

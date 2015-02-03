@@ -7,6 +7,10 @@ module.exports = {
         }
     },
     cache: {
-        defaultTime: 120 // Default cache time in seconds
+        defaultTime: 120, // Default cache time in seconds
+        key: {
+            prefix: 'cw_',
+            crc32: false
+        }
     }
 };
