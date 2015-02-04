@@ -10,11 +10,11 @@ var myObject = {
     }
 };
 
-var myCachedObject = wrapper(myObject,180);
+var myWrappedObject = wrapper(myObject,180);
 co(function *(){
-    console.log(yield myCachedObject.hello("Oleg!"));
+    console.log(yield myWrappedObject.hello("Oleg!"));
     //console.log(myCachedObject.first.toString());
-    console.log(yield myCachedObject.first(7,2));
+    console.log(yield myWrappedObject.first(7,2));
 }).catch(function(e) {throw e; });
 
 
