@@ -23,11 +23,11 @@
     /**
      * Cahe wrapper
      * @param {function} targetObject
-     * @param {number} cacheTime
+     * @param {number} expires
      * @param {object} options now support 'cacherType' option ('generator' or 'promise'). By default = 'generator'
      * @return {object}
      */
-    module.exports = function (targetObject, cacheTime, options) {
+    module.exports = function (targetObject, expires, options) {
         var cacherIdx = 0;
         if (typeof options == "object") {
             cacherIdx = detectCacherType(options.cacherType);
@@ -37,7 +37,7 @@
         redefinedMethods.forEach(function(method) {
             object[method] = function(){
                 var args = [].slice.call(arguments);
-                return cachers[cacherIdx](targetObject[method], args, { cacheTime: cacheTime, salt: method });
+                return cachers[cacherIdx](targetObject[method], args, { expires: expires, salt: method });
             };
         });
 

@@ -7,7 +7,8 @@ module.exports = {
         }
     },
     cache: {
-        defaultTime: 120, // Default cache time in seconds
+        expires: 120, // Default cache expires in seconds
+        storage: 'memcached',
         key: {
             prefix: 'cw_',
             crc32: false
