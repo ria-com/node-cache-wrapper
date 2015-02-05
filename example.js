@@ -2,7 +2,7 @@ var wrapper = require('./'),
     co = require('co');
 
 var myObject = {
-    first: function* (a,b) {
+    sum: function* (a,b) {
         return a+b;
     },
     hello: function* (name) {
@@ -10,11 +10,11 @@ var myObject = {
     }
 };
 
-var myWrappedObject = wrapper(myObject,180);
+var myWrappedObject = wrapper(myObject,180); // Cache all methods on 3 min
 co(function *(){
     console.log(yield myWrappedObject.hello("Oleg!"));
     //console.log(myCachedObject.first.toString());
-    console.log(yield myWrappedObject.first(7,2));
+    console.log(yield myWrappedObject.sum(7,2));
 }).catch(function(e) {throw e; });
 
 
