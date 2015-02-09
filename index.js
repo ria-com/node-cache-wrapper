@@ -28,16 +28,18 @@
      * @return {object}
      */
     module.exports = function (targetObject, expires, options) {
-        var cacherIdx = 0;
+        var cacherIdx = 0,
+            salt = '';
         if (typeof options == "object") {
             cacherIdx = detectCacherType(options.cacherType);
+            salt = options.salt || '';
         }
         var redefinedMethods=getAllMethods(targetObject);
         var object = {};
         redefinedMethods.forEach(function(method) {
             object[method] = function(){
                 var args = [].slice.call(arguments);
-                return cachers[cacherIdx](targetObject[method], args, { expires: expires, salt: method });
+                return cachers[cacherIdx](targetObject[method], args, { expires: expires, salt: method+salt });
             };
         });
 

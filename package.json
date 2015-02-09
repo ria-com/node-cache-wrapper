@@ -1,6 +1,6 @@
 {
   "name": "cache-wrapper",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Wrap to cacher's all methods of target object. Now support co-cacher & cacher-promise",
   "author": {
     "name": "Oleg Cherniy",

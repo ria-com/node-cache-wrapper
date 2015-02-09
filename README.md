@@ -1,7 +1,7 @@
 node-cache-wrapper
 ===================
 
-Wrap co-cacher in to target object with generators
+Wrap co-cacher in to target object with generators. Based on [co-cacher](https://github.com/ria-com/node-co-cacher) & [cacher-promise](https://github.com/ria-com/node-co-cacher)
 
 
 example
@@ -9,7 +9,7 @@ example
 
 Generators wrapper:
 ```javascript
-var wrapper = require('./'),
+var wrapper = require('cache-wrapper'),
     co = require('co');
 
 var myObject = {
@@ -32,7 +32,7 @@ Warning: Wrapper work only for generator's for koajs or co library
 
 Promises wrapper:
 ```javascript
-var wrapper = require('./'),
+var wrapper = require('cache-wrapper'),
     Q = require('q');
 
 var myObject = {
