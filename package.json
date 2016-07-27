@@ -1,6 +1,6 @@
 {
   "name": "cache-wrapper",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Wrap to cacher's all methods of target object. Now support co-cacher & cacher-promise",
   "author": {
     "name": "Oleg Cherniy",
@@ -14,8 +14,8 @@
     "co": "*",
     "co-wait": "*",
     "q": "*",
-    "co-cacher": "git://github.com/ria-com/node-co-cacher.git#master",
-    "cacher-promise": "git://github.com/ria-com/node-cacher-promise.git#master"
+    "co-cacher": "*",
+    "cacher-promise": "*"
   },
   "devDependencies": {
     "jasmine-node": "*"
